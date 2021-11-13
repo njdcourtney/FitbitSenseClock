@@ -1,0 +1,33 @@
+<svg id="clockface">
+  <image id="background" href="milky-way-bg.png" />
+  <section x="0" y="0" width="100%" height="40%">
+      <section x="0" y="0" width="100%" height="25%">
+        <text id="dayText" class="defaultText">Weekday</text>
+      </section>
+      <section x="0" y="$" width="100%" height="50%">
+        <text id="timeText" class="jumboText">00:00:00</text>
+      </section>
+      <section x="0" y="$" width="100%" height="25%">
+        <text id="dateText" class="defaultText">Date</text>
+      </section>
+  </section>
+  <section x="5%" y="$+5%" width="90%" height="50%">
+    <section id="sensors" x="0" y="0" width="50%" height="100%">
+      <section class="sensorSection" id="stepsSection">
+        <image href="steps.png" id="steps_icon" class="icon sensorIcon"/>
+        <text id="stepsText" class="sensorText" >Steps</text>
+      </section>
+      <section class="sensorSection" id="heartRateSection">
+        <image href="heart-rate.png" id="steps_icon" class="icon sensorIcon"/>
+        <text id="heartRateText" class="sensorText" >Heart</text>
+      </section>
+      <section class="sensorSection" id="heartRateSection">
+        <image href="energy.png" id="steps_icon" class="icon sensorIcon"/>
+        <text id="caloriesText" class="sensorText" >Sleep</text>
+      </section>
+    </section>
+    <section x="$" y="0" width="50%" height="100%">
+    </section>
+  </section>
+</svg>
+
