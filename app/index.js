@@ -1,20 +1,37 @@
 import clock from "clock";
 import * as document from "document";
-import * as activity from "./activity";
-import * as timeDayDate from "./timeDayDate";
+import { timeDayDateHandler } from "./timeDayDate";
+import { activityHandler } from "./activity";
+import { heartRateHandler } from "./hrm";
 
-clock.granularity = "minutes"; // seconds, minutes, hours
+clock.granularity = "seconds"; // seconds, minutes, hours
 
 clock.ontick = (evt) => {
-    setElementText("dayText", timeDayDate.getDay(evt.date));
-    setElementText("timeText", timeDayDate.getTime(evt.date));
-    setElementText("dateText", timeDayDate.getDate(evt.date));
-    setElementText("stepsText", activity.getSteps() );
-    setElementText("heartRateText", activity.getHeart() );
-    setElementText("caloriesText", activity.getCalories() );
+    timeDayDateHandler(evt, clockCallback)
+    activityHandler(activityCallback)
+    heartRateHandler(heartRateCallback)
 };
 
+/* --------- CLOCK ---------- */
+function clockCallback(data) {
+    setElementText("dayText", data.day);
+    setElementText("timeText", data.time);
+    setElementText("dateText", data.date);
+}
+
+/* ------- ACTIVITY --------- */
+function activityCallback(data) {
+    setElementText("stepsText", data.steps );
+    setElementText("caloriesText", data.calories );
+}
+
+/* ------- HEART RATE --------- */
+function heartRateCallback(data) {
+    console.log(JSON.stringify(data, null, 4))
+    setElementText("heartRateText", data.heartRate );
+}
+
 function setElementText(id, value) {
-    const element = document.getElementById(id);
+    let element = document.getElementById(id);
     element.text = value;
 }

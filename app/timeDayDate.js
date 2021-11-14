@@ -1,23 +1,32 @@
-
+// Set up variables
 const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun","Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+export function timeDayDateHandler(evt, callback) {
+    // Get the formatted strings
+    let today = evt.date;
+    let dayString = formatDay(today);
+    let timeString = formatTime(today);
+    let dateString = formatDate(today);
+    // Return the data to the callback function
+    callback({day: dayString, time: timeString, date: dateString});
+  }
 
 function zeroPad(i) {
     return `${i < 10 ? "0" + i : i}`;
 }
 
-export function getDay(date) {
+function formatDay(date) {
     return weekdays[date.getDay()]
 }
 
-export function getTime(date) {
+function formatTime(date) {
     const hrs = zeroPad( date.getHours() );
     const mins = zeroPad( date.getMinutes() );
     return `${hrs}:${mins}`
 }
 
-
-export function getDate(date) {
+function formatDate(date) {
     const dayStr = `${date.getDate()}`;
     const monStr = months[date.getMonth()];
     let suffix = "th";
