@@ -20,11 +20,11 @@
 }
 
 .jumboText {
-  font-size: 64;
+  font-size: 96;
   font-family: System-Bold;
   text-length: 32;
   x: "50%";
-  y: "50%+30"; 
+  y: "50%+40"; 
   text-anchor: middle;
   fill: white;
 }
@@ -57,4 +57,16 @@
   y: "30";
   width: "100%-45";
   height: "100%-35";
+}
+
+#batteryIcon {
+  fill: white;
+}
+
+#batteryValue {
+  font-size: 30;
+  font-family: System-Regular;
+  text-length: 12;
+  text-anchor: start;
+  fill: white;
 }

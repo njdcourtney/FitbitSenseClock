@@ -3,12 +3,9 @@ import { HeartRateSensor } from "heart-rate";
 import { display } from "display";
 import { BodyPresenceSensor } from "body-presence";
 
-
 // Heart Rate default value and export function
-let heartRate = 'Denied';
+let heartRate = '---';
 export function heartRateHandler(callback) {
-    if (HeartRateSensor && appbit.permissions.granted("access_heart_rate")) {
-    }
     // Return the data to the callback function
     callback({heartRate: heartRate});
 }
