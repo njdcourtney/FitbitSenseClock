@@ -16,9 +16,11 @@
     "requestedPermissions": [
       "access_activity",
       "access_heart_rate",
-      "access_location"
+      "access_location",
+      "run_background"
     ],
     "buildTargets": [
+      "atlas",
       "vulcan"
     ],
     "i18n": {},
@@ -27,5 +29,8 @@
   "scripts": {
     "build": "fitbit-build",
     "debug": "fitbit"
+  },
+  "dependencies": {
+    "suncalc": "^1.8.0"
   }
 }
