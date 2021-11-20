@@ -2,51 +2,48 @@
   <image id="background" x="0" y="0" width="100%" height="100%" href="milky-way-bg.png" />
   <section x="0" y="0" width="100%" height="40%">
       <!-- <rect x="0" y="0" width="100%" height="100%" opacity="0.5" fill="steelblue"/> -->
-      <section x="0" y="0" width="100%" height="20%">
-        <text id="dayText" class="defaultText">Weekday</text>
+      <section x="0" y="0" width="100%" height="60%">
+        <text id="timeText" class="defaultText">00:00:00</text>
       </section>
-      <section x="0" y="$" width="100%" height="60%">
-        <text id="timeText" class="jumboText">00:00:00</text>
-      </section>
-      <section x="0" y="$" width="100%" height="20%">
+      <section x="0" y="$" width="100%" height="40%">
         <text id="dateText" class="defaultText">Date</text>
       </section>
   </section>
   <section x="5%" y="$+5%" width="90%" height="40%">
     <section id="sensors" x="0" y="0" width="50%" height="100%">
       <section class="sensorSection" id="stepsSection">
-        <image href="steps.png" id="steps_icon" class="icon sensorIcon"/>
-        <text id="stepsText" class="sensorText" >Steps</text>
+        <image href="steps.png" id="steps_icon" class="sensorIcon"/>
+        <text id="stepsText" class="defaultText sensorText" >Steps</text>
       </section>
       <section class="sensorSection" id="heartRateSection">
-        <image href="heart-rate.png" id="heart_icon" class="icon sensorIcon"/>
-        <text id="heartRateText" class="sensorText" >Heart</text>
+        <image href="heart-rate.png" id="heart_icon" class="sensorIcon"/>
+        <text id="heartRateText" class="defaultText sensorText" >Heart</text>
       </section>
       <section class="sensorSection" id="caloriesSection">
-        <image href="energy.png" id="calorie_icon" class="icon sensorIcon"/>
-        <text id="caloriesText" class="sensorText" >Calories</text>
+        <image href="energy.png" id="calorie_icon" class="sensorIcon"/>
+        <text id="caloriesText" class="defaultText sensorText" >Calories</text>
       </section>
       <!-- <rect x="0" y="0" width="100%" height="100%" opacity="0.5" fill="salmon"/> -->
     </section>
     <section x="$" y="0" width="50%" height="100%">
       <section class="sensorSection" id="tempSection">
-        <image href="thermometer.png" id="temp_icon" class="icon sensorIcon"/>
-        <text id="tempText" class="sensorText" >Temp</text>
+        <image href="thermometer.png" id="temp_icon" class="sensorIcon"/>
+        <text id="tempText" class="defaultText sensorText" >Temp</text>
       </section>
       <section class="sensorSection" id="sunRiseSection">
-        <image href="sunrise.png" id="sunrise_icon" class="icon sensorIcon"/>
-        <text id="sunRiseText" class="sensorText" >Sunrise</text>
+        <image href="sunrise.png" id="sunrise_icon" class="sensorIcon"/>
+        <text id="sunRiseText" class="defaultText sensorText" >Sunrise</text>
       </section>
       <section class="sensorSection" id="sunSetSection">
-        <image href="sunset.png" id="sunset_icon" class="icon sensorIcon"/>
-        <text id="sunSetText" class="sensorText" >Sunset</text>
+        <image href="sunset.png" id="sunset_icon" class="sensorIcon"/>
+        <text id="sunSetText" class="defaultText sensorText" >Sunset</text>
       </section>
       <!-- <rect x="0" y="0" width="100%" height="100%" opacity="0.5" fill="darkgoldenrod"/> -->
     </section>
   </section>
   <section id="battery" x="0" y="$" width="100%" height="10%">
       <image id="batteryIcon" href="battery-full.png" x="50%-37" y="0+10" width="37" height="25"/>
-      <text id="batteryValue" x="$+10" y="50%+15" width="80%" height="100%">Batt</text>
+      <text id="batteryValue" class="defaultText" x="$+10" y="50%+15" width="80%" height="100%">Batt</text>
       <!-- <rect x="0" y="0" width="100%" height="100%" opacity="0.5" fill="green"/> -->
   </section>
 

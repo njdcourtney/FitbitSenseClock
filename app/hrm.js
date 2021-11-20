@@ -2,12 +2,13 @@ import { me as appbit } from "appbit";
 import { HeartRateSensor } from "heart-rate";
 import { display } from "display";
 import { BodyPresenceSensor } from "body-presence";
+import { setHeartRate } from './ui'
 
 // Heart Rate default value and export function
 let heartRate = '---';
-export function heartRateHandler(callback) {
+export function updateHeartRate() {
     // Return the data to the callback function
-    callback({heartRate: heartRate});
+    setHeartRate({heartRate: heartRate});
 }
 
 // Set up the heart rate sensor

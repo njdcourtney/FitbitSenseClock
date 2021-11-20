@@ -3,28 +3,26 @@
 }
 
 .defaultText {
-  font-size: 32;
   font-family: System-Regular;
-  text-length: 32;
-  x: "50%";
-  y: "50%+16"; 
-  text-anchor: middle;
   fill: white;
+  text-anchor: middle;
 }
 
-.jumboText {
+#timeText {
   font-size: 96;
   font-family: System-Bold;
-  text-length: 32;
+  text-length: 5;
   x: "50%";
   y: "50%+40"; 
   text-anchor: middle;
-  fill: white;
 }
 
-.icon {
-  width: 35;
-  height: 35;
+#dateText {
+  font-size: 40;
+  text-length: 12;
+  x: "50%";
+  y: "50%+20"; 
+  
 }
 
 .sensorSection {
@@ -35,6 +33,8 @@
 }
 
 .sensorIcon {
+  width: 35;
+  height: 35;
   x: 0;
   y: 5;
   fill: white;
@@ -42,10 +42,8 @@
 
 .sensorText{
   font-size: 30;
-  font-family: System-Regular;
-  text-length: 12;
+  text-length: 5;
   text-anchor: start;
-  fill: white;
   x: "$+10";
   y: "30";
   width: "100%-45";
@@ -58,8 +56,6 @@
 
 #batteryValue {
   font-size: 30;
-  font-family: System-Regular;
-  text-length: 12;
+  text-length: 4;
   text-anchor: start;
-  fill: white;
 }

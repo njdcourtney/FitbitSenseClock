@@ -1,5 +1,6 @@
 import { battery } from "power";
+import { setBattery } from './ui';
 
-export function batteryHandler(callback) {
-    callback({percentage: battery.chargeLevel, chargingStatus: battery.charging})
+export function updateBattery() {
+    setBattery({percentage: battery.chargeLevel, chargingStatus: battery.charging})
 }
