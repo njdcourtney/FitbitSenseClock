@@ -20,8 +20,8 @@ function formatDate(date) {
   let dow = weekdays[date.getDay()]
   let dayStr = `${date.getDate()}`;
   let monStr = months[date.getMonth()];
-  let suffix = "th";
-  switch (date.getDate) {
+  let suffix = "--";
+  switch (date.getDate() ) {
       case 1:
       case 21:
       case 31:
