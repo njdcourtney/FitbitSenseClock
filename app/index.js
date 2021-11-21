@@ -5,8 +5,6 @@ import { updateHeartRate } from "./hrm";
 import { updateTimeDayDate } from "./timeDayDate";
 import { updateEnvironment } from "./environment";
 
-import * as messaging from "messaging";
-
 // Set up the Clock
 clock.granularity = "minutes"; // seconds, minutes, hours
 
