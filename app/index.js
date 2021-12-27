@@ -5,6 +5,8 @@ import { updateHeartRate } from "./hrm";
 import { updateTimeDayDate } from "./timeDayDate";
 import { updateEnvironment } from "./environment";
 
+
+
 // Set up the Clock
 clock.granularity = "minutes"; // seconds, minutes, hours
 
@@ -14,7 +16,5 @@ clock.ontick = (evt) => {
     updateActivity();
     updateHeartRate();
     updateBattery();
+    updateEnvironment();
 };
-
-// Fetch the environment data every 30 minutes
-setInterval( updateEnvironment() , 30 * 1000 * 60);

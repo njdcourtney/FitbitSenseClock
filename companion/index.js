@@ -1,4 +1,3 @@
-import { me as companion } from "companion";
 import weather from "weather";
 import * as SunCalc from 'suncalc'
 import { geolocation } from "geolocation";
